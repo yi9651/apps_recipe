@@ -1,0 +1,4 @@
+### GET all food
+GET localhost:8081/api/v1/food
+
+###
