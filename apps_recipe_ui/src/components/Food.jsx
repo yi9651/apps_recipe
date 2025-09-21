@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Food({ food }) {
   return (
     <div className="m-2 relative flex flex-col my-6 bg-stone-100 shadow-sm border border-slate-200 rounded-lg w-96">
@@ -13,12 +15,13 @@ export default function Food({ food }) {
         </p>
       </div>
       <div className="flex justify-between m-5">
-        <button
+        <Link
+          to={`/recipe/${food.id}`}
           className="rounded-md bg-slate-800 py-2 px-2.5 border border-transparent text-center text-xs text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
           type="button"
         >
           Explore more
-        </button>
+        </Link>
         <div className="flex gap-2">
           <div className="flex items-center rounded-md bg-yellow-100 px-3 py-1.5 text-xs text-yellow-800 transition-all shadow-sm hover:bg-yellow-200 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">
             <svg

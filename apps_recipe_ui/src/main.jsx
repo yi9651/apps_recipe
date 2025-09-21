@@ -18,6 +18,8 @@ import "react-toastify/dist/ReactToastify.css";
 import Login from "./components/Login.jsx";
 import About from "./components/About.jsx";
 import Recipe from "./components/Recipe.jsx";
+import NewRecipe from "./components/NewRecipe.jsx";
+import Ingredients from "./components/Ingredients.jsx";
 
 const routes = createRoutesFromElements(
   <>
@@ -27,6 +29,8 @@ const routes = createRoutesFromElements(
       <Route path="/contact" element={<Contact />} action={saveContact} />
       <Route path="/about" element={<About />} />
       <Route path="/recipe/:id" element={<Recipe />} />
+      <Route path="/new_recipe" element={<NewRecipe />} />
+      <Route path="ingredients" element={<Ingredients />} />
     </Route>
     <Route path="/register" element={<Register />} action={saveUser} />
     <Route path="/login" element={<Login />} />
